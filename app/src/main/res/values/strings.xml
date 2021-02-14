@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Texdoo</string>
+    <string name="welcome">Good Morning,</string>
+    <string name="name">Moataz</string>
+    <string name="good_morning">Good Morning,</string>
+    <string name="good_afternoon">Good Afternoon,</string>
+    <string name="good_evening">Good Evening,</string>
+    <string name="sleep">Have a nice night,</string>
+    <string name="edittext_hint"><font size="20">Tap to enter text ...</font></string>
+    <string name="text_scanner">Text will be display here...</string>
+</resources>

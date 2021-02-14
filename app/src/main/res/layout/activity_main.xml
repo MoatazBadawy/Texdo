@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <!-- Welcome Text -->
+    <TextView
+        android:id="@+id/text_welcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/test"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_18ssp"
+        tools:text="@string/welcome" />
+
+    <!-- User Name Text -->
+    <TextView
+        android:id="@+id/text_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text_welcome"
+        android:layout_alignStart="@+id/text_welcome"
+        android:text="@string/name"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_18ssp"
+        android:fontFamily="@font/test"
+        app:layout_constraintEnd_toEndOf="@+id/text_welcome"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/text_welcome"
+        app:layout_constraintTop_toBottomOf="@+id/text_welcome" />
+
+    <!-- Vector Image -->
+    <ImageView
+        android:id="@+id/vector_image"
+        android:layout_width="@dimen/_39sdp"
+        android:layout_height="@dimen/_39sdp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="15dp"
+        android:background="@drawable/icontest" />
+
+
+    <EditText
+        android:id="@+id/text_write"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_390sdp"
+        android:layout_above="@+id/speech_button"
+        android:layout_below="@+id/text_name"
+        android:layout_marginStart="@dimen/_11sdp"
+        android:layout_marginTop="@dimen/_24sdp"
+        android:layout_marginEnd="@dimen/_11sdp"
+        android:layout_marginBottom="@dimen/_47sdp"
+        android:background="@drawable/rounder_edit_text"
+        android:elevation="2dp"
+        android:gravity="center"
+        android:hint="@string/edittext_hint"
+        android:inputType="textMultiLine"
+        android:ems="10"
+        android:maxLength="900"
+        android:paddingLeft="8dp"
+        android:paddingTop="16dp"
+        android:paddingRight="8dp"
+        app:counterEnabled="true" />
+
+    <TextView
+        android:id="@+id/text_numbers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/scanner_button"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="@dimen/_14sdp"
+        android:layout_marginBottom="@dimen/_27sdp"
+        android:text="900" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/scanner_button"
+        android:layout_marginTop="@dimen/_9sdp"
+        android:layout_marginEnd="@dimen/_3sdp"
+        android:layout_marginBottom="@dimen/_27sdp"
+        android:layout_toStartOf="@+id/text_numbers"
+        android:text="/"
+        app:layout_constraintEnd_toStartOf="@+id/text_numbers" />
+
+    <TextView
+        android:id="@+id/count_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/scanner_button"
+        android:layout_marginTop="@dimen/_9sdp"
+        android:layout_marginEnd="@dimen/_3sdp"
+        android:layout_marginBottom="@dimen/_27sdp"
+        android:layout_toStartOf="@+id/textView"
+        android:text="0"
+        app:layout_constraintEnd_toStartOf="@+id/text_numbers" />
+
+    <!-- Edit text to write the words -->
+
+    <Spinner
+        android:id="@+id/spinner_speed"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_26sdp"
+        android:layout_above="@+id/speak_button"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="@dimen/_9sdp"
+        android:layout_marginTop="@dimen/_2sdp"
+        android:layout_marginBottom="@dimen/_21sdp"
+        android:background="@null" />
+
+    <ImageView
+        android:id="@+id/speak_button"
+        android:layout_width="46dp"
+        android:layout_height="46dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="@dimen/_12sdp"
+        android:layout_marginBottom="@dimen/_13sdp"
+        android:background="@drawable/ic_mic_off" />
+
+    <Button
+        android:id="@+id/speech_button"
+        android:layout_width="251dp"
+        android:layout_height="47dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="@dimen/_12sdp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="@dimen/_13sdp"
+        android:layout_toStartOf="@+id/scanner_button"
+        android:layout_toEndOf="@+id/speak_button"
+        android:background="@drawable/rounder_speak_button"
+        android:text="Speak"
+        android:textColor="@color/white" />
+
+    <ImageView
+        android:id="@+id/scanner_button"
+        android:layout_width="38dp"
+        android:layout_height="42dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="21dp"
+        android:layout_marginBottom="@dimen/_15sdp"
+        android:background="@drawable/ic_qr_scanner"
+        app:layout_constraintBottom_toBottomOf="@+id/speech_button"
+        app:layout_constraintEnd_toStartOf="@+id/speech_button"
+        app:layout_constraintTop_toTopOf="@+id/speech_button" />
+
+    <TextView
+        android:id="@+id/txt_flexible_progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
+
+</RelativeLayout>
+
+<!-- another design
+  <?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+
+<TextView
+android:id="@+id/text_welcome"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:layout_alignParentTop="true"
+android:layout_marginStart="16dp"
+android:layout_marginTop="24dp"
+android:fontFamily="@font/test"
+android:textColor="@color/black"
+android:textSize="@dimen/_18ssp"
+tools:text="@string/welcome" />
+
+<TextView
+android:id="@+id/text_name"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:layout_below="@+id/text_welcome"
+android:layout_alignStart="@+id/text_welcome"
+android:text="@string/name"
+android:textColor="@color/black"
+android:textSize="@dimen/_18ssp"
+android:fontFamily="@font/test"
+app:layout_constraintEnd_toEndOf="@+id/text_welcome"
+app:layout_constraintHorizontal_bias="0.0"
+app:layout_constraintLeft_toLeftOf="parent"
+app:layout_constraintRight_toRightOf="parent"
+app:layout_constraintStart_toStartOf="@+id/text_welcome"
+app:layout_constraintTop_toBottomOf="@+id/text_welcome" />
+
+<ImageView
+android:layout_width="@dimen/_39sdp"
+android:layout_height="@dimen/_39sdp"
+android:layout_alignParentTop="true"
+android:layout_alignParentEnd="true"
+android:layout_marginTop="30dp"
+android:layout_marginEnd="15dp"
+android:background="@drawable/icontest" />
+
+<ImageView
+android:id="@+id/spec_but"
+android:layout_width="46dp"
+android:layout_height="46dp"
+android:layout_alignParentStart="true"
+android:layout_alignParentBottom="true"
+android:layout_marginStart="@dimen/_12sdp"
+android:layout_marginBottom="@dimen/_13sdp"
+android:background="@drawable/ic_mic_off" />
+
+
+<TextView
+android:id="@+id/text_numbers"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:layout_above="@+id/test"
+android:layout_alignParentEnd="true"
+android:layout_marginEnd="@dimen/_14sdp"
+android:layout_marginBottom="@dimen/_27sdp"
+android:visibility="gone"
+android:text="900" />
+
+<TextView
+android:id="@+id/textView"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:layout_above="@+id/test"
+android:layout_marginTop="@dimen/_9sdp"
+android:layout_marginEnd="@dimen/_3sdp"
+android:layout_marginBottom="@dimen/_27sdp"
+android:layout_toStartOf="@+id/text_numbers"
+android:text="/"
+android:visibility="gone"
+
+app:layout_constraintEnd_toStartOf="@+id/text_numbers" />
+
+<TextView
+android:id="@+id/count_text"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:layout_above="@+id/test"
+android:layout_marginTop="@dimen/_9sdp"
+android:layout_marginEnd="@dimen/_3sdp"
+android:layout_marginBottom="@dimen/_27sdp"
+android:layout_toStartOf="@+id/textView"
+android:text="0"
+android:visibility="gone"
+
+app:layout_constraintEnd_toStartOf="@+id/text_numbers" />
+
+<EditText
+android:id="@+id/text_write"
+android:layout_width="match_parent"
+android:layout_height="@dimen/_390sdp"
+android:layout_above="@+id/speak_button"
+android:layout_below="@+id/text_name"
+android:layout_marginStart="@dimen/_11sdp"
+android:layout_marginTop="@dimen/_24sdp"
+android:layout_marginEnd="@dimen/_11sdp"
+android:layout_marginBottom="@dimen/_47sdp"
+android:background="@drawable/rounder_edit_text"
+android:elevation="2dp"
+android:gravity="center"
+android:hint="@string/edittext_hint"
+android:maxLength="900"
+android:paddingLeft="8dp"
+android:paddingTop="16dp"
+android:paddingRight="8dp"
+app:counterEnabled="true" />
+
+<Spinner
+android:id="@+id/spinner_speed"
+android:layout_width="wrap_content"
+android:layout_height="@dimen/_26sdp"
+android:layout_above="@+id/test"
+android:layout_alignParentEnd="true"
+android:layout_marginEnd="@dimen/_14sdp"
+android:layout_marginTop="@dimen/_2sdp"
+android:layout_marginBottom="@dimen/_21sdp"
+android:background="@null" />
+
+<ImageView
+android:id="@+id/test"
+android:layout_width="38dp"
+android:layout_height="42dp"
+android:layout_alignParentEnd="true"
+android:layout_alignParentBottom="true"
+android:layout_marginEnd="21dp"
+android:layout_marginBottom="@dimen/_15sdp"
+android:background="@drawable/ic_qr_scanner"
+app:layout_constraintBottom_toBottomOf="@+id/speak_button"
+app:layout_constraintEnd_toStartOf="@+id/speak_button"
+app:layout_constraintTop_toTopOf="@+id/speak_button" />
+
+<Button
+android:id="@+id/speak_button"
+android:layout_width="251dp"
+android:layout_height="47dp"
+android:layout_alignParentBottom="true"
+android:layout_marginStart="@dimen/_12sdp"
+android:layout_marginEnd="24dp"
+android:layout_marginBottom="@dimen/_13sdp"
+android:layout_toStartOf="@+id/test"
+android:layout_toEndOf="@+id/spec_but"
+android:background="@drawable/rounder_speak_button"
+android:text="Speak"
+android:textColor="@color/white" />
+
+    </RelativeLayout>
+    -->

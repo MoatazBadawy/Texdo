@@ -1,0 +1,17 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/color_transparen</item>
+        <item name="colorAccent">#888888</item>
+        <item name="android:spinnerItemStyle">@style/SpinnerTextViewItem</item>
+    </style>
+
+    <style name="SpinnerTextViewItem" parent="@android:style/Widget.TextView" >
+        <item name="android:textSize" >@dimen/_14ssp</item>
+        <item name="android:padding">@dimen/_4sdp</item>
+        <item name="android:textStyle" >bold</item>
+    </style>
+
+</resources>
